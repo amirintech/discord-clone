@@ -5,6 +5,7 @@ import { ClerkProvider } from '@clerk/nextjs'
 import './globals.css'
 import ThemeProvider from '@/components/providers/theme'
 import { cn } from '@/lib/utils'
+import ModalProvider from '@/components/providers/modal'
 
 const font = Inter({ subsets: ['latin'] })
 
@@ -30,6 +31,7 @@ export default function RootLayout({
             defaultTheme='dark'
           >
             {children}
+            <ModalProvider />
           </ThemeProvider>
         </body>
       </html>
